@@ -1,0 +1,53 @@
+package com.example.belajarhurufhijaiyah;
+
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.LinearLayout;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
+
+public class MainActivity extends AppCompatActivity {
+
+    private LinearLayout buttonTranslate, buttonQuiz, buttonMatch;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.background_color));
+
+        // Inisialisasi tombol
+        buttonTranslate = findViewById(R.id.button_translate);
+        buttonQuiz = findViewById(R.id.button_quiz);
+        buttonMatch = findViewById(R.id.button_match); // tombol baru
+
+        // Klik tombol Translate (Belajar Huruf)
+        buttonTranslate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent translateIntent = new Intent(MainActivity.this, TranslateActivity.class);
+                startActivity(translateIntent);
+            }
+        });
+
+        // Klik tombol Kuis Interaktif
+        buttonQuiz.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent quizIntent = new Intent(MainActivity.this, QuizActivity.class);
+                startActivity(quizIntent);
+            }
+        });
+
+        // Klik tombol Cocokkan Huruf (fitur baru)
+        buttonMatch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent matchIntent = new Intent(MainActivity.this, Match2Activity.class);
+                startActivity(matchIntent);
+            }
+        });
+    }
+}
