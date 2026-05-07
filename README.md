@@ -1,6 +1,6 @@
-# Hijaiyah Sign Language Translator
+# Hijaiah Sign Language Translator
 
-Android application for learning Hijaiyah sign language through interactive visual learning features for the deaf community.
+Android application for learning Hijaiah sign language through interactive visual learning features for the deaf community.
 
 ## Features
 - Letter Learning with sign-language videos
